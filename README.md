@@ -1,6 +1,6 @@
 # ViewPagerHelper
 
-** 一个可以帮助识别出ViewPager滑动方向的帮助类。**
+### 一个可以帮助识别出ViewPager滑动方向的帮助类。
 
 ```
 public interface IViewPagerTrendListener {
@@ -40,7 +40,7 @@ public interface IViewPagerTrendListener {
 }
 ```
 
-从第一页滑动到第二页时执行日志如下：
+### 从第一页滑动到第二页时执行日志如下：
 
 ```
 06-21 10:52:17.406  4861  4861 D MainActivity: onDirectSelected() called with: direct = [2], selectedPosition = [1], nextPosition = [2]
