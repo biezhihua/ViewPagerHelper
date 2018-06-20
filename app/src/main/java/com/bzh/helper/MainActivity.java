@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFractionPage(int direct, int selectedPosition, int nextPosition, float positionOffset) {
-                Log.d(TAG, "onFractionPage() called with: direct = [" + direct + "], selectedPosition = [" + selectedPosition + "], nextPosition = [" + nextPosition + "], positionOffset = [" + positionOffset + "]");
+            public void onFractionPage(int direct, int selectedPosition, int nextPosition, float fraction) {
+                Log.d(TAG, "onFractionPage() called with: direct = [" + direct + "], selectedPosition = [" + selectedPosition + "], nextPosition = [" + nextPosition + "], positionOffset = [" + fraction + "]");
             }
         });
     }

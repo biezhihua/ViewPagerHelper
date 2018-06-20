@@ -16,13 +16,38 @@ public class ViewPagerHelper implements ViewPager.OnPageChangeListener {
 
     public interface IViewPagerTrendListener {
 
+        /**
+         * 当一个页面被完全选定时调用。该方法会在{@link #onPrePageSelected(int)}之后被调用。
+         *
+         * @param selectedPosition 当前位置
+         */
         void onFullPageSelected(int selectedPosition);
 
+        /**
+         * 当滑动方向被确定时调用
+         *
+         * @param direct           方向 {@link #DIRECT_LEFT} {@link #DIRECT_NONE} {@link #DIRECT_RIGHT}
+         * @param selectedPosition 当前位置
+         * @param nextPosition     下一个位置
+         */
         void onDirectSelected(int direct, int selectedPosition, int nextPosition);
 
+        /**
+         * 当一个页面被选定时调用。该方法会在{@link #onFullPageSelected(int)}之前被调用。
+         *
+         * @param position 位置
+         */
         void onPrePageSelected(int position);
 
-        void onFractionPage(int direct, int selectedPosition, int nextPosition, float positionOffset);
+        /**
+         * 在当前方向下滑动的分数
+         *
+         * @param direct           方向
+         * @param selectedPosition 当前位置
+         * @param nextPosition     下一个位置
+         * @param fraction         分数
+         */
+        void onFractionPage(int direct, int selectedPosition, int nextPosition, float fraction);
     }
 
     private List<IViewPagerTrendListener> mListeners = new ArrayList<>();
